@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syllabl - Game Developer Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">← Back to Portfolio</a></li>
+                <li><a href="#project-overview">Overview</a></li>
+                <li><a href="#project-features">Features</a></li>
+                <li><a href="#project-technologies">Tech</a></li>
+                <li><a href="#project-gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-image" style="--hero-bg: url('../images/project1/hero.png');">
+            <h1 class="hero-text" style="display: none;">syllabl</h1>
+        </section>
+
+        <section id="project-overview" class="card">
+            <h2>Overview</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Serverless & Scalable:</strong> Built as a static site with a serverless backend (AWS Lambda, DynamoDB, API Gateway, Route 53, CloudFront, S3, and more).</li>
+                    <li><strong>Multi-Mode Gameplay:</strong> Unique scoring logic, dynamic UI transitions, and a variety of ways to play (daily, shuffle, and custom modes). Share custom puzzles with friends!</li>
+                    <li><strong>Smart Validation:</strong> Integrates the Merriam-Webster Collegiate API and Datamuse API to validate words, analyze syllable patterns, and derive obscurity-based scores.</li>
+                    <li><strong>AI & Analytics:</strong> Monitored with Datadog's RUM, AWS Integration, and Lambda Log Forwarder. Features daily performance analytics, to encourage competition.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="project-features">
+            <h2>Key Features</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Multiple Game Modes</h3>
+                    <p>Shuffle all the puzzles, or even create and share custom puzzles. The game also maintains a master puzzle list and a featured daily puzzle, for competing with other players.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Scoring System</h3>
+                    <p>Words are scored on an obscurity scale, earning 1 point for common words and up to 5 points for rare ones, incentivizing players to aim for more obscure words.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Theme System</h3>
+                    <p>Eight distinct visual themes with complete color palettes for players to personalize their experience, all available by default.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-technologies" class="card">
+            <h2>Technologies Used</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Custom Animations</li>
+                        <li>Mobile-First Design</li>
+                        <li>Accessibility Features</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>AWS Lambda</li>
+                        <li>DynamoDB</li>
+                        <li>Route 53</li>
+                        <li>CloudFront</li>
+                        <li>S3</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>APIs</h3>
+                    <ul>
+                        <li>Merriam-Webster Collegiate</li>
+                        <li>Datamuse</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-gallery">
+            <h2>Gallery</h2>
+            <div class="carousel">
+                <button class="carousel-arrow left" aria-label="Previous image"></button>
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <img src="../images/project1/main-game.png" alt="syllabl main game interface">
+                        <div class="carousel-caption">The main game interface.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project1/puzzle-selection.png" alt="Puzzle selection screen">
+                        <div class="carousel-caption">Choose from among all existing puzzles.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project1/theme-interaction.png" alt="Theme selection example">
+                        <div class="carousel-caption">Personalize your experience with multiple themes.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project1/puzzle-start.png" alt="Puzzle start screen">
+                        <div class="carousel-caption">Each puzzle has six stages of increasing difficulty.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project1/stats-example.png" alt="Stats and analytics">
+                        <div class="carousel-caption">Review your performance on the featured daily puzzle. Compete with friends and other players.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project1/completed-game.png" alt="Completed game summary">
+                        <div class="carousel-caption">Were you able to find any rare words?</div>
+                    </div>
+                </div>
+                <button class="carousel-arrow right" aria-label="Next image"></button>
+            </div>
+        </section>
+
+        <section id="project-links" class="card">
+            <h2>Links</h2>
+            <div class="project-grid">
+                <a href="https://playsyllabl.com" target="_blank" class="modern-button"><span>Play syllabl</span></a>
+                <a href="https://github.com/mariogerardi/playsyllabl" target="_blank" class="modern-button"><span>View Source Code</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mario Gerardi Portfolio</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

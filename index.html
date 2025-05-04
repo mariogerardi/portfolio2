@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Gerardi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init({
+        publicKey: '9wVmkpDc1M_G_9qPC'
+      });
+    </script>
+    <meta name="description" content="Mario Gerardi's portfolio: Game developer, creative technologist, and builder of immersive digital experiences.">
+    <meta name="keywords" content="game developer, portfolio, Mario Gerardi, JavaScript, AWS, AI, web development">
+    <meta property="og:title" content="Mario Gerardi - Game Developer Portfolio">
+    <meta property="og:description" content="Game developer, creative technologist, and builder of immersive digital experiences.">
+    <meta property="og:image" content="images/avatar.png">
+    <meta property="og:url" content="https://mariogerardi.github.io/portfolio2/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger" aria-label="Open navigation menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Featured Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-hero" id="hero">
+            <h1 class="hero-text">Mario Gerardi</h1>
+            <p class="subtitle home-subtitle">Creating immersive digital experiences</p>
+        </section>
+
+        <section id="about" class="card about-avatar">
+            <h2 style="text-align:center;">About Me</h2>
+            <div class="about-flex">
+                <img src="images/avatar.png" alt="Mario Gerardi avatar" class="about-avatar-img">
+                <div class="content">
+                    <p class="about-employment"><strong>Currently, I work as a Technical Support Engineer II at Datadog.</strong></p>
+                    <p>I'm a creative technologist and game developer with a passion for building engaging, innovative digital experiences. My background spans technical support engineering, enablement, and full-stack development, with a focus on cloud platforms, serverless architectures, and AI integration. I thrive at the intersection of technology and education—designing tools, games, and learning programs that empower users and teams.</p><br>
+                    <p>With hands-on experience in AWS, Datadog, and modern JavaScript frameworks, I enjoy solving complex problems and making technology accessible. I'm recognized for my collaborative approach, strong communication skills, and ability to lead cross-functional projects from concept to launch. Whether I'm architecting a daily word puzzle, guiding an LLM in a game, or designing feedback-driven learning tools, I bring curiosity, empathy, and a drive for continuous improvement to every project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="images/project1/thumbnail.png" alt="Syllabl Game Interface">
+                    <h3>syllabl</h3>
+                    <p>A daily word game exploring word structure and obscurity. Integrates the Merriam-Webster Collegiate API and Datamuse API to validate words, analyze syllable patterns, and calculate obscurity-based scores. Features a custom puzzle builder, animated syllable feedback, mobile-first UI, and daily analytics.</p>
+                    <a href="projects/project1.html" class="modern-button"><span>View Project</span></a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2/thumbnail.png" alt="Explain Game Screenshot">
+                    <h3>Explain</h3>
+                    <p>An AI-powered puzzle game where players guide an LLM toward a secret word using strategic clues. Features multi-mode gameplay, unique scoring logic, and a custom GPT-4 prompt system for evaluating clues and reasoning. The game includes a global leaderboard, custom achievements, and advanced analytics for player insights.</p>
+                    <a href="projects/project2.html" class="modern-button"><span>View Project</span></a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3/thumbnail.png" alt="Speak Easy Screenshot">
+                    <h3>Speak Easy</h3>
+                    <p>An OpenAI-integrated language tool designed to assist language learning. Validates user input from various languages, provides feedback on tone and clarity, and explores AI-assisted learning and prompt engineering. Built as a lightweight prototype, it demonstrates the potential for AI-driven, feedback-rich educational experiences.</p>
+                    <a href="projects/project3.html" class="modern-button"><span>View Project</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>HTML/CSS</li>
+                        <li>React Native</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Developer Tools</h3>
+                    <ul>
+                        <li>GitHub</li>
+                        <li>Confluence</li>
+                        <li>VS Code</li>
+                        <li>Markdown</li>
+                        <li>OpenAI</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>AWS</h3>
+                    <ul>
+                        <li>CloudWatch</li>
+                        <li>Lambda</li>
+                        <li>DynamoDB</li>
+                        <li>API Gateway</li>
+                        <li>S3</li>
+                        <li>EventBridge</li>
+                        <li>Route 53</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Datadog</h3>
+                    <ul>
+                        <li>Cloud Platform</li>
+                        <li>Serverless</li>
+                        <li>Monitors</li>
+                        <li>RUM</li>
+                        <li>Agent</li>
+                        <li>Logs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Get in Touch</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="modern-button"><span>Send Message</span></button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mario Gerardi Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

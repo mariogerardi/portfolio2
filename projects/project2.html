@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain - Game Developer Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">← Back to Portfolio</a></li>
+                <li><a href="#project-overview">Overview</a></li>
+                <li><a href="#project-features">Features</a></li>
+                <li><a href="#project-technologies">Tech</a></li>
+                <li><a href="#project-gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-image" style="--hero-bg: url('../images/project2/hero.png');">
+            <h1 class="hero-text" style="display: none;">Explain</h1>
+        </section>
+
+        <section id="project-overview" class="card">
+            <h2>Overview</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Serverless & Scalable:</strong> Built as a static site with a serverless backend (DynamoDB, API Gateway, EventBridge) for leaderboard persistence and OpenAI interactions.</li>
+                    <li><strong>Multi-Mode Gameplay:</strong> Designed multi-mode gameplay with unique scoring logic and dynamic UI transitions.</li>
+                    <li><strong>Smart Prompting:</strong> Engineered a GPT-4 prompt system that evaluates clues based on confidence, search space, and reasoning.</li>
+                    <li><strong>Monitoring & Analytics:</strong> Monitored with Datadog's OpenAI integration, AWS Integration, and Lambda Log Forwarder for enhanced observability.</li>
+                    <li><strong>Features:</strong> Custom achievements, theme unlocks, archival browsing, animated feedback, gauge-based metrics, and a global leaderboard.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="project-features">
+            <h2>Key Features</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>AI-Powered Gameplay</h3>
+                    <p>Guide a GPT-4 LLM to guess a secret word using strategic clues, with real-time feedback and scoring based on AI reasoning.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Serverless Architecture</h3>
+                    <p>Static frontend with a robust AWS backend for persistence, event handling, and OpenAI API integration.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Advanced Analytics</h3>
+                    <p>Custom dashboard, gauge-based metrics, and archival browsing for deep player insights and observability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-technologies" class="card">
+            <h2>Technologies Used</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>AWS Lambda</li>
+                        <li>AWS DynamoDB</li>
+                        <li>API Gateway</li>
+                        <li>EventBridge</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>APIs</h3>
+                    <ul>
+                        <li>OpenAI</li>
+                        <li>Custom GPT-4 Prompt System</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-gallery">
+            <h2>Gallery</h2>
+            <div class="carousel">
+                <button class="carousel-arrow left" aria-label="Previous image"></button>
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <img src="../images/project2/home.png" alt="Home screen">
+                        <div class="carousel-caption">Welcome to Explain. Guide a GPT-4 LLM to guess a secret word using strategic clues.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project2/shuffle-mode.png" alt="Shuffle mode">
+                        <div class="carousel-caption">Play from over 400+ puzzles.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project2/theme-selection.png" alt="Theme selection">
+                        <div class="carousel-caption">Earn achievements to unlock a variety of visual themes, to personalize your experience.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/project2/archive.png" alt="Archive browser">
+                        <div class="carousel-caption">Browse and replay previous puzzles, review your performance, and unlock achievements.</div>
+                    </div>
+                </div>
+                <button class="carousel-arrow right" aria-label="Next image"></button>
+            </div>
+        </section>
+
+        <section id="project-links" class="card">
+            <h2>Links</h2>
+            <div class="project-grid">
+                <a href="https://expl41n.s3.us-east-1.amazonaws.com/index.html" target="_blank" class="modern-button"><span>Play Explain</span></a>
+                <a href="https://github.com/mariogerardi/explain-game" target="_blank" class="modern-button"><span>View Source Code</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mario Gerardi Portfolio</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 
