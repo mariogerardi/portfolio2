@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('JS loaded!');
     // Handle back to portfolio navigation
     const backToPortfolio = document.querySelector('a[href="../index.html"]');
     if (backToPortfolio) {
@@ -37,25 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // EmailJS integration for contact form with debug logging
+    // EmailJS integration for contact form
     const form = document.getElementById('contact-form');
     if (form) {
-        console.log('Contact form found. Attaching submit handler.');
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            console.log('Form submit intercepted. Attempting to send via EmailJS...');
             emailjs.sendForm('service_iddkulb', 'template_bh5osl9', this)
                 .then(function(response) {
-                    console.log('EmailJS sendForm success:', response);
                     alert('Message sent successfully!');
                     form.reset();
                 }, function(error) {
-                    console.error('EmailJS sendForm error:', error);
                     alert('Failed to send message. Please try again later.');
                 });
         });
-    } else {
-        console.warn('Contact form not found on page.');
     }
 
     // Add animation to project cards
@@ -90,60 +83,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');
     if (hamburger && nav) {
         hamburger.addEventListener('click', () => {
-            nav.classList.toggle('nav-open');
-        });
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                nav.classList.toggle('nav-open');
-            }
+            nav.classList.toggle('open');
         });
     }
 
-    // Carousel for project 1 gallery
-    if (document.querySelector('.carousel')) {
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-        const prevBtn = document.querySelector('.carousel-arrow.left');
-        const nextBtn = document.querySelector('.carousel-arrow.right');
-        let current = 0;
-        let interval = null;
+    // Carousel functionality for project gallery
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+        const prevButton = carousel.querySelector('.carousel-arrow.left');
+        const nextButton = carousel.querySelector('.carousel-arrow.right');
+        let currentIndex = 0;
+        let autoSlide;
 
-        function showSlide(idx) {
+        function showSlide(index) {
             slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === idx);
+                slide.classList.toggle('active', i === index);
             });
-            current = idx;
+            currentIndex = index;
+        }
+
+        function prevSlide() {
+            showSlide((currentIndex - 1 + slides.length) % slides.length);
         }
 
         function nextSlide() {
-            showSlide((current + 1) % slides.length);
-        }
-        function prevSlide() {
-            showSlide((current - 1 + slides.length) % slides.length);
+            showSlide((currentIndex + 1) % slides.length);
         }
 
         function startAuto() {
-            if (interval) clearInterval(interval);
-            interval = setInterval(nextSlide, 4000);
-        }
-        function stopAuto() {
-            if (interval) clearInterval(interval);
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextSlide, 6000);
         }
 
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            startAuto();
-        });
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-            startAuto();
-        });
-        track.addEventListener('mouseenter', stopAuto);
-        track.addEventListener('mouseleave', startAuto);
-        track.addEventListener('focusin', stopAuto);
-        track.addEventListener('focusout', startAuto);
+        if (prevButton) prevButton.addEventListener('click', () => { prevSlide(); startAuto(); });
+        if (nextButton) nextButton.addEventListener('click', () => { nextSlide(); startAuto(); });
 
-        // Touch/swipe support
         let startX = null;
         track.addEventListener('touchstart', e => {
             startX = e.touches[0].clientX;
@@ -159,5 +134,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showSlide(0);
         startAuto();
-    }
+    });
 }); 
