@@ -4,7 +4,7 @@ Welcome to my portfolio! I'm Mario Gerardi, a creative technologist and game dev
 
 ## 🌐 Live Demo
 
-> [Coming soon: Hosted on GitHub Pages!]
+> [Live Site: https://mariogerardi.github.io/portfolio2/](https://mariogerardi.github.io/portfolio2/)
 
 ## 🚀 Featured Projects
 
